@@ -1,5 +1,5 @@
 import React from 'react';
-import Chirp from './components/chirp';
+import Timeline from './components/Timeline'
 import Input from './components/Input'
 
 const App = () => {
@@ -7,9 +7,7 @@ const App = () => {
         <>
             <h1 className="jumbotron">Chirper</h1>
             <Input />
-            <Chirp />
-            <Chirp />
-            <Chirp />
+            <Timeline />
         </>
     )
 }
