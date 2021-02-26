@@ -19,11 +19,10 @@ const Timeline = (props) => {
 
   return (
     <>
-      <div className="mb-3">
-        <h5 className="bg-light mb-0">Compose Chirp</h5>
+      <div className="d-flex flex-direction-column">
         <div>
           <div className="input-group">
-            <span className="input-group-text col-1">Subject</span>
+            <span className="input-group-text">Username</span>
             <input
               type="text"
               className="form-control"
@@ -33,7 +32,7 @@ const Timeline = (props) => {
             ></input>
           </div>
           <div className="input-group">
-            <span className="input-group-text col-1">Message</span>
+            <span className="input-group-text">Chirp</span>
             <textarea
               className="form-control"
               aria-label="Message"
@@ -43,20 +42,20 @@ const Timeline = (props) => {
           </div>
         </div>
         <button
-          className="btn btn-success btn-lg"
+          className="btn btn-success btn-md h-25"
           onClick={() => handleClick(subject, message)}
         >
           Post chirp fr
         </button>
-        <div className="card-deck d-flex flex-column align-items-center">
-          {chirps
-            .slice(0)
-            .reverse()
-            .map((chirp) => {
-              /* Reverses array so chirps display from newest to oldest */
-              return <Chirp subject={chirp.subject} message={chirp.message} />;
-            })}
-        </div>
+      <div className="card-deck d-flex flex-column align-items-center col-8">
+        {chirps
+          .slice(0)
+          .reverse()
+          .map((chirp) => {
+            /* Reverses array so chirps display from newest to oldest */
+            return <Chirp subject={chirp.subject} message={chirp.message} />;
+          })}
+      </div>
       </div>
       
     </>

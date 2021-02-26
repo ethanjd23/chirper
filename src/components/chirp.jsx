@@ -3,7 +3,7 @@ import React from 'react';
 const Chirp = props => {
     return (
     
-        <div className="card m-3 col-8">
+        <div className="card m-3 col-12">
             <p className="card-header">{props.subject}</p>
             <div className="card-body">
                 {/* <p className="card-title">Subject</p> */}
